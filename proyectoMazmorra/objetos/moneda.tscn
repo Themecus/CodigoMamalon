@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://by3a06rjkl0pa"]
+
+[ext_resource type="Texture2D" uid="uid://cxjyu7a2qte27" path="res://PNG/Default/tile_coin.png" id="1_t6lno"]
+
+[sub_resource type="GDScript" id="GDScript_620wn"]
+script/source = "class_name dinero
+extends Area2D
+
+func sisa():
+	pass
+
+
+func borrarMoneda(body):
+	set_visible(false)
+	get_node(\"CollisionShape2D\").free()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vf07r"]
+radius = 22.8035
+
+[node name="moneda" type="Area2D"]
+script = SubResource("GDScript_620wn")
+
+[node name="TileCoin" type="Sprite2D" parent="."]
+texture = ExtResource("1_t6lno")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vf07r")

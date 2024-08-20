@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://tds48eti31gg"]
+
+[ext_resource type="Texture2D" uid="uid://c2ylxryjy620i" path="res://imagenes/barril.png" id="1_lkys8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_my4x8"]
+radius = 19.57
+
+[node name="barril" type="RigidBody2D"]
+rotation = 0.249194
+mass = 0.61
+gravity_scale = 8.0
+
+[node name="Obstaculo" type="Sprite2D" parent="."]
+scale = Vector2(0.245079, 0.246864)
+texture = ExtResource("1_lkys8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-18.7119, -8.65249)
+rotation = -0.315865
+scale = Vector2(-1.03999, 0.979286)
+shape = SubResource("CircleShape2D_my4x8")
+one_way_collision_margin = 0.0

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct313keelhbfu"]
+
+[ext_resource type="Texture2D" uid="uid://cawc65cnib0nb" path="res://PNG/Default/yellow_body_circle.png" id="1_6eskx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nr2ps"]
+radius = 31.1389
+
+[node name="pelota" type="RigidBody2D"]
+scale = Vector2(0.289027, 0.295499)
+
+[node name="YellowBodyCircle2" type="Sprite2D" parent="."]
+position = Vector2(10.3796, 13.5364)
+scale = Vector2(0.759491, 0.761424)
+texture = ExtResource("1_6eskx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10.3796, 13.5364)
+shape = SubResource("CircleShape2D_nr2ps")

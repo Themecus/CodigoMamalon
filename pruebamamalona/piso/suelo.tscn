@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnon2qqcyv7mq"]
+
+[ext_resource type="Texture2D" uid="uid://bu502yj618btp" path="res://PNG/Default/tile_half_center.png" id="1_rpebw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rnyni"]
+size = Vector2(583, 23.5)
+
+[node name="plataforma" type="StaticBody2D"]
+
+[node name="TileCenter" type="Sprite2D" parent="."]
+position = Vector2(-2, -19)
+scale = Vector2(7.25, 1)
+texture = ExtResource("1_rpebw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -26)
+shape = SubResource("RectangleShape2D_rnyni")
+one_way_collision = true

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk7qiyx8m0okt"]
+
+[ext_resource type="Texture2D" uid="uid://b5c8nq1iwpnif" path="res://PNG/Default/blue_hand_rock.png" id="1_5yjna"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xikhc"]
+size = Vector2(38, 37)
+
+[node name="personaje" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, -8.5)
+shape = SubResource("RectangleShape2D_xikhc")
+
+[node name="BlueHandRock" type="Sprite2D" parent="."]
+position = Vector2(-4, -8)
+texture = ExtResource("1_5yjna")

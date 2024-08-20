@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://4pdtuuq70y46"]
+
+[ext_resource type="Texture2D" uid="uid://df7dkj6hfdpho" path="res://imagenes/persona.png" id="1_fjuh8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5o550"]
+size = Vector2(180, 161.716)
+
+[node name="prota" type="CharacterBody2D"]
+position = Vector2(-2, -75)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-125, -151)
+texture = ExtResource("1_fjuh8")
+
+[node name="cuerpo" type="CollisionShape2D" parent="."]
+position = Vector2(-125.99, -105.733)
+rotation = -0.00778643
+scale = Vector2(1, 0.930447)
+shape = SubResource("RectangleShape2D_5o550")

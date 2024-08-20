@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0em8vxx6uibg"]
+
+[ext_resource type="Texture2D" uid="uid://gpl3wujvwj3l" path="res://PNG/Double/tile_grey.png" id="1_x3gkh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fxvl8"]
+size = Vector2(69, 70)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="TileGrey" type="Sprite2D" parent="."]
+position = Vector2(-2, -2)
+scale = Vector2(0.425, 0.45)
+texture = ExtResource("1_x3gkh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, -2)
+shape = SubResource("RectangleShape2D_fxvl8")

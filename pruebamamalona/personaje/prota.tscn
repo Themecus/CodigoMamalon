@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpmbm38r1oetw"]
+
+[ext_resource type="Script" path="res://scripts/personaje p.gd" id="1_iwvxx"]
+[ext_resource type="Texture2D" uid="uid://twt56vegygar" path="res://PNG/Default/blue_body_square.png" id="1_rkcms"]
+[ext_resource type="Texture2D" uid="uid://f2m1okeygll1" path="res://PNG/Default/face_a.png" id="2_d6huk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_30f6w"]
+size = Vector2(83.5, 81.5)
+
+[node name="prota" type="CharacterBody2D"]
+script = ExtResource("1_iwvxx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rkcms")
+
+[node name="FaceA" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(3, -10.6569)
+scale = Vector2(1, 0.941852)
+texture = ExtResource("2_d6huk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_30f6w")

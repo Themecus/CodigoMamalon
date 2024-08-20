@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://djkihl1v085mk"]
+
+[ext_resource type="PackedScene" uid="uid://kpqucerk32k8" path="res://piso/plataforma.tscn" id="2_08f44"]
+[ext_resource type="PackedScene" uid="uid://ct313keelhbfu" path="res://personaje/pelota.tscn" id="3_ysgb6"]
+[ext_resource type="PackedScene" uid="uid://bpmbm38r1oetw" path="res://personaje/prota.tscn" id="4_s3ky0"]
+[ext_resource type="PackedScene" path="res://piso/viga.tscn" id="5_s7n2d"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(5, 13)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_08f44")]
+position = Vector2(644, 272)
+rotation = -0.553556
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_08f44")]
+position = Vector2(20, 80)
+rotation = 0.29147
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("2_08f44")]
+position = Vector2(314, 22)
+rotation = -0.29147
+
+[node name="pelota" parent="." instance=ExtResource("3_ysgb6")]
+position = Vector2(505, -108)
+
+[node name="prota" parent="." instance=ExtResource("4_s3ky0")]
+position = Vector2(312, 357)
+
+[node name="viga" parent="." instance=ExtResource("5_s7n2d")]
+position = Vector2(214, 432)
+rotation = 0.644092

@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://cybuca2hjq8ra"]
+
+[ext_resource type="PackedScene" uid="uid://du6j0h6k6f1dr" path="res://paredes/pared.tscn" id="1_fnkjc"]
+[ext_resource type="PackedScene" uid="uid://be7xpalpsuthi" path="res://paredes/puerta.tscn" id="2_a5alb"]
+[ext_resource type="PackedScene" uid="uid://c7f7i21woobgv" path="res://personajes/prota.tscn" id="3_alcfo"]
+[ext_resource type="Script" path="res://codigo/numeroMonedas.gd" id="4_pg2md"]
+[ext_resource type="PackedScene" uid="uid://by3a06rjkl0pa" path="res://objetos/moneda.tscn" id="5_lx2bk"]
+
+[node name="nivel2" type="Node2D"]
+
+[node name="StaticBody2D" parent="." instance=ExtResource("1_fnkjc")]
+position = Vector2(565, 17)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("1_fnkjc")]
+position = Vector2(1132, 256)
+rotation = 1.57079
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("1_fnkjc")]
+position = Vector2(19, 274)
+rotation = -1.5708
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("1_fnkjc")]
+position = Vector2(563, 628)
+rotation = 3.14159
+
+[node name="puerta3" parent="." instance=ExtResource("2_a5alb")]
+position = Vector2(1148, 305)
+rotation = -6.28319
+
+[node name="numeroMonedas" type="Label" parent="."]
+offset_left = 47.0
+offset_top = 44.0
+offset_right = 251.0
+offset_bottom = 116.0
+text = "0
+
+"
+script = ExtResource("4_pg2md")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_alcfo")]
+position = Vector2(566, 316)
+
+[node name="moneda" parent="." instance=ExtResource("5_lx2bk")]
+position = Vector2(484, 421)
+
+[node name="moneda2" parent="." instance=ExtResource("5_lx2bk")]
+position = Vector2(431, 332)
+
+[connection signal="body_entered" from="puerta3" to="CharacterBody2D" method="_on_puerta_3_body_entered"]
+[connection signal="body_entered" from="moneda" to="moneda" method="borrarMoneda"]
+[connection signal="body_entered" from="moneda2" to="moneda2" method="borrarMoneda"]

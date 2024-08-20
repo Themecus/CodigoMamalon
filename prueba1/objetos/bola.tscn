@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cump0n40mrct0"]
+
+[ext_resource type="Texture2D" uid="uid://b6ya05kp6ke2l" path="res://imagenes/red_body_circle.png" id="1_rs5jk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xtned"]
+radius = 14.5602
+
+[node name="barril" type="RigidBody2D"]
+rotation = 0.249194
+mass = 0.01
+gravity_scale = 8.625
+
+[node name="RedBodyCircle" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, -1.90735e-06)
+scale = Vector2(0.363385, 0.356557)
+texture = ExtResource("1_rs5jk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xtned")

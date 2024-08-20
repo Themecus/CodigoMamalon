@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://gwvn5d6kfese"]
+
+[ext_resource type="PackedScene" uid="uid://cehsut2183olp" path="res://plataformas/puente.tscn" id="1_snik0"]
+[ext_resource type="PackedScene" uid="uid://bq2br4cgofx8r" path="res://plataformas/porta_pies.tscn" id="2_ucyfb"]
+[ext_resource type="PackedScene" uid="uid://4pdtuuq70y46" path="res://personajes/prota.tscn" id="3_gbucp"]
+[ext_resource type="PackedScene" uid="uid://tds48eti31gg" path="res://objetos/barril.tscn" id="4_edglw"]
+[ext_resource type="PackedScene" uid="uid://cump0n40mrct0" path="res://objetos/bola.tscn" id="6_qx2a7"]
+[ext_resource type="PackedScene" uid="uid://dsev64bpgaj58" path="res://plataformas/plataformaReal.tscn" id="6_t1lhj"]
+
+[node name="Nivel1" type="Node2D"]
+position = Vector2(-222, 206)
+scale = Vector2(0.99, 1.08537)
+
+[node name="puente" parent="." instance=ExtResource("1_snik0")]
+position = Vector2(229, 399)
+
+[node name="puente2" parent="." instance=ExtResource("1_snik0")]
+position = Vector2(745, 399)
+
+[node name="puente3" parent="." instance=ExtResource("1_snik0")]
+position = Vector2(1265, 399)
+
+[node name="puente4" parent="." instance=ExtResource("1_snik0")]
+position = Vector2(392.929, -215.596)
+rotation = 0.49413
+
+[node name="portaPies" parent="." instance=ExtResource("2_ucyfb")]
+position = Vector2(109, -13)
+rotation = 0.00564966
+scale = Vector2(0.303328, 0.494313)
+
+[node name="portaPies2" parent="." instance=ExtResource("2_ucyfb")]
+position = Vector2(265.657, 66.3371)
+rotation = 0.00564966
+scale = Vector2(0.303328, 0.494313)
+
+[node name="portaPies3" parent="." instance=ExtResource("2_ucyfb")]
+position = Vector2(433.333, -39.618)
+rotation = 0.00564966
+scale = Vector2(0.303328, 0.494313)
+
+[node name="portaPies4" parent="." instance=ExtResource("2_ucyfb")]
+position = Vector2(53, 163)
+rotation = 0.00564966
+scale = Vector2(0.303328, 0.494313)
+
+[node name="portaPies5" parent="." instance=ExtResource("2_ucyfb")]
+position = Vector2(651.515, -24.8764)
+rotation = -0.485858
+scale = Vector2(0.727956, 0.772748)
+
+[node name="prota" parent="." instance=ExtResource("3_gbucp")]
+position = Vector2(841.414, 284.697)
+scale = Vector2(0.297495, 0.267857)
+
+[node name="barril2" parent="." instance=ExtResource("4_edglw")]
+position = Vector2(718.182, -114.247)
+scale = Vector2(-1.60864, 1.54021)
+mass = 0.9
+
+[node name="barril" parent="." instance=ExtResource("6_qx2a7")]
+position = Vector2(1005.05, 28.5617)
+
+[node name="PlataformaReal" parent="." instance=ExtResource("6_t1lhj")]
+position = Vector2(992.929, 155.707)
+rotation = 0.00199199

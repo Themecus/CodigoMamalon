@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu63j6ktdsmx2"]
+
+[ext_resource type="Texture2D" uid="uid://dubfyq0amlu5w" path="res://PNG/Double/blue_body_square.png" id="1_cv36s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3isk"]
+size = Vector2(591.5, 54)
+
+[node name="viga" type="StaticBody2D"]
+
+[node name="BlueBodySquare" type="Sprite2D" parent="."]
+scale = Vector2(3.575, 0.26875)
+texture = ExtResource("1_cv36s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8.25, -6)
+shape = SubResource("RectangleShape2D_k3isk")

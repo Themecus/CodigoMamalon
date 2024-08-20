@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://djkihl1v085mk"]
+
+[ext_resource type="PackedScene" uid="uid://cnon2qqcyv7mq" path="res://piso/suelo.tscn" id="1_eb801"]
+[ext_resource type="PackedScene" uid="uid://kpqucerk32k8" path="res://piso/plataforma.tscn" id="2_08f44"]
+[ext_resource type="PackedScene" uid="uid://ct313keelhbfu" path="res://personaje/pelota.tscn" id="3_ysgb6"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(5, 13)
+
+[node name="plataforma" parent="." instance=ExtResource("1_eb801")]
+position = Vector2(228, 303)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_08f44")]
+position = Vector2(496, 121)
+rotation = 1.12831
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_08f44")]
+position = Vector2(20, 80)
+rotation = 0.29147
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("2_08f44")]
+position = Vector2(314, 22)
+rotation = -0.29147
+
+[node name="pelota" parent="." instance=ExtResource("3_ysgb6")]
+position = Vector2(540, 69)

@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://clulpq8yqxidh"]
+
+[ext_resource type="PackedScene" uid="uid://bi5q020n6ncjt" path="res://objetos/plataforma.tscn" id="1_8ucvm"]
+[ext_resource type="PackedScene" uid="uid://bxno2eftk2yhq" path="res://objetos/bola.tscn" id="2_e01hu"]
+[ext_resource type="PackedScene" uid="uid://bk7qiyx8m0okt" path="res://objetos/personaje.tscn" id="3_agkp7"]
+[ext_resource type="Script" path="res://scripts/movimientos.gd" id="4_ga1dg"]
+
+[node name="nivel" type="Node2D"]
+
+[node name="plataforma" parent="." instance=ExtResource("1_8ucvm")]
+position = Vector2(151, 349)
+
+[node name="plataforma2" parent="." instance=ExtResource("1_8ucvm")]
+position = Vector2(358, 303)
+
+[node name="plataforma3" parent="." instance=ExtResource("1_8ucvm")]
+position = Vector2(639, 429)
+
+[node name="plataforma4" parent="." instance=ExtResource("1_8ucvm")]
+position = Vector2(744, 151)
+rotation = 0.399911
+
+[node name="bola" parent="." instance=ExtResource("2_e01hu")]
+position = Vector2(726, 103)
+
+[node name="personaje" parent="." instance=ExtResource("3_agkp7")]
+position = Vector2(401, 263)
+input_pickable = true
+script = ExtResource("4_ga1dg")
+
+[node name="bola2" parent="." instance=ExtResource("2_e01hu")]
+position = Vector2(333, 258)
+mass = 0.1
+gravity_scale = 0.1

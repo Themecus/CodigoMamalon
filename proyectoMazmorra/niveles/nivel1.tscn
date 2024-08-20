@@ -1,0 +1,106 @@
+[gd_scene load_steps=7 format=3 uid="uid://cigaqew25imgp"]
+
+[ext_resource type="PackedScene" uid="uid://du6j0h6k6f1dr" path="res://paredes/pared.tscn" id="1_suakx"]
+[ext_resource type="PackedScene" uid="uid://d0em8vxx6uibg" path="res://paredes/pilar.tscn" id="2_6smjp"]
+[ext_resource type="PackedScene" uid="uid://be7xpalpsuthi" path="res://paredes/puerta.tscn" id="3_2lu0w"]
+[ext_resource type="PackedScene" uid="uid://c7f7i21woobgv" path="res://personajes/prota.tscn" id="4_pspdf"]
+[ext_resource type="PackedScene" uid="uid://by3a06rjkl0pa" path="res://objetos/moneda.tscn" id="5_6rvtk"]
+[ext_resource type="Script" path="res://codigo/numeroMonedas.gd" id="6_ybc0r"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" parent="." instance=ExtResource("1_suakx")]
+position = Vector2(565, 17)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("1_suakx")]
+position = Vector2(1132, 256)
+rotation = 1.57079
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("1_suakx")]
+position = Vector2(19, 274)
+rotation = -1.5708
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("1_suakx")]
+position = Vector2(563, 628)
+rotation = 3.14159
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("2_6smjp")]
+position = Vector2(207, 171)
+
+[node name="StaticBody2D7" parent="." instance=ExtResource("2_6smjp")]
+position = Vector2(899, 171)
+
+[node name="StaticBody2D8" parent="." instance=ExtResource("2_6smjp")]
+position = Vector2(580, 171)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("2_6smjp")]
+position = Vector2(207, 489)
+
+[node name="StaticBody2D9" parent="." instance=ExtResource("2_6smjp")]
+position = Vector2(580, 489)
+
+[node name="StaticBody2D10" parent="." instance=ExtResource("2_6smjp")]
+position = Vector2(899, 489)
+
+[node name="puerta1" parent="." instance=ExtResource("3_2lu0w")]
+position = Vector2(4, 310)
+
+[node name="StaticBody2D12" parent="." instance=ExtResource("2_6smjp")]
+position = Vector2(207, 171)
+
+[node name="StaticBody2D13" parent="." instance=ExtResource("2_6smjp")]
+position = Vector2(899, 171)
+
+[node name="StaticBody2D14" parent="." instance=ExtResource("2_6smjp")]
+position = Vector2(580, 171)
+
+[node name="puerta2" parent="." instance=ExtResource("3_2lu0w")]
+position = Vector2(1145, 284)
+rotation = -6.28319
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_pspdf")]
+position = Vector2(566, 316)
+
+[node name="moneda" parent="." instance=ExtResource("5_6rvtk")]
+position = Vector2(484, 421)
+
+[node name="moneda6" parent="." instance=ExtResource("5_6rvtk")]
+position = Vector2(681, 250)
+
+[node name="moneda5" parent="." instance=ExtResource("5_6rvtk")]
+position = Vector2(399, 485)
+
+[node name="moneda4" parent="." instance=ExtResource("5_6rvtk")]
+position = Vector2(421, 212)
+
+[node name="moneda2" parent="." instance=ExtResource("5_6rvtk")]
+position = Vector2(338, 320)
+
+[node name="moneda3" parent="." instance=ExtResource("5_6rvtk")]
+position = Vector2(265, 288)
+
+[node name="numeroMonedas" type="Label" parent="."]
+offset_left = 47.0
+offset_top = 44.0
+offset_right = 251.0
+offset_bottom = 116.0
+text = "0
+
+"
+script = ExtResource("6_ybc0r")
+
+[connection signal="body_entered" from="puerta1" to="CharacterBody2D" method="_on_puerta_1_body_entered"]
+[connection signal="body_entered" from="puerta2" to="CharacterBody2D" method="_on_puerta_2_body_entered"]
+[connection signal="enviarInformacion" from="CharacterBody2D" to="numeroMonedas" method="_on_character_body_2d_enviar_informacion"]
+[connection signal="body_entered" from="moneda" to="CharacterBody2D" method="_on_moneda_body_entered"]
+[connection signal="body_entered" from="moneda" to="moneda" method="borrarMoneda"]
+[connection signal="body_entered" from="moneda6" to="CharacterBody2D" method="_on_moneda_body_entered"]
+[connection signal="body_entered" from="moneda6" to="moneda6" method="borrarMoneda"]
+[connection signal="body_entered" from="moneda5" to="CharacterBody2D" method="_on_moneda_body_entered"]
+[connection signal="body_entered" from="moneda5" to="moneda5" method="borrarMoneda"]
+[connection signal="body_entered" from="moneda4" to="CharacterBody2D" method="_on_moneda_body_entered"]
+[connection signal="body_entered" from="moneda4" to="moneda4" method="borrarMoneda"]
+[connection signal="body_entered" from="moneda2" to="CharacterBody2D" method="_on_moneda_body_entered"]
+[connection signal="body_entered" from="moneda2" to="moneda2" method="borrarMoneda"]
+[connection signal="body_entered" from="moneda3" to="CharacterBody2D" method="_on_moneda_body_entered"]
+[connection signal="body_entered" from="moneda3" to="moneda3" method="borrarMoneda"]
